@@ -1,0 +1,297 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #fff;
+}
+a{text-decoration: none;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Home_mobile */
+body{background-color: #020202; line-height: 1.2;}
+header{
+    width: 100%;
+    position: fixed; top: 0;left: 0;
+    background-color: #020202;
+    z-index: 2;
+}
+.header-wrap{
+    width: 94%; height: 80px;
+    margin: 0 auto;
+    /* padding: 20px 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #FFFFFF;
+}
+.logo{width: 147px;height:24px ;}
+.bi{
+    color: #fff;
+    font-size: 24px;
+    padding: 8px;
+    line-height: .9;
+}
+.bi-x-lg{
+    position: absolute;
+    top: 20px; right: 12px;
+    display: none;
+    transition: 2s;
+}
+.bi-x-lg.open{display: block;}
+.bi-list.open{display: none;}
+
+nav{
+    width: 100%;
+    position: fixed;top: -90%;
+    transition: top .7s;
+    background-color: #020202;
+    z-index: 1;
+}
+nav.open{top: 80px;}
+nav>ul{
+    padding: 192px 95px;
+    border-bottom: 1px solid #fff;
+}
+nav>ul>li>a{
+    font-size: 80px;
+    font-weight: 900;
+}
+nav>ul>li:first-child{margin-bottom: 8px;}
+
+
+
+.wrap{width: 94%; margin: 0 auto;}
+.catchcopy{font-size: 48px; font-weight: 900; padding: 120px 0 40px 0;}
+.btn1{
+    font-size: 20px;font-weight: 900; 
+    padding: 17px 40px; position: relative; top: 24px;
+    border: 1px solid #FFFFFF; border-radius: 16px;
+}
+.btn1:hover, .cta>a:hover{background-color: #fff;color: #020202;}
+.animation-section{
+    text-align: center;
+    margin-top: 240px;
+    margin-bottom: 120px;
+    overflow: hidden;
+}
+.animation-section svg{
+    position: relative;
+    animation: slide-up 3.5s linear infinite;
+}
+.animation-section svg:nth-child(2){
+  animation-delay: .3s;
+}
+.animation-section svg:nth-child(1){
+    animation-delay: .6s;
+  }
+@keyframes slide-up{
+    0%{top:171px}
+    25%{top: 0;}
+    50%{top: 0;}
+    75%{top: -171px;}
+    100%{top: -171px;}
+}
+
+.service-card-group{margin-top: 48px;}
+.service-card-group li{
+    padding: 40px 20px;
+    border: 1px solid #525252;
+    border-radius: 16px;
+    margin-bottom: 12px;
+}
+.service-card-group li p{line-height: 1.5;}
+
+
+.container{
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.container>h1{font-size: 20px;}
+.img-wrap{
+    overflow: hidden;
+    white-space: nowrap;
+}
+.w1{margin-bottom: 12px;margin-left: -30px;}
+.img-wrap a img{width: 160px;height: 40px;}
+.img-wrap a{margin-right: 20px;}
+.w1 a:first-child img{width: 100px;}
+.w2 a:first-child img{margin-left: -160px;}
+
+
+.cards-wrapper{
+    position: relative;
+    height: 300px; 設定手機上卡片的高度
+    overflow: hidden;
+    margin: 48px 0 30px 0;
+}
+.card{
+    box-sizing: border-box;
+    width: 351px;
+    height: auto;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 20px;
+    line-height: 1.5;
+
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0px 100px 80px rgba(18, 18, 18, 0.07), 0px 41.7776px 33.4221px rgba(18, 18, 18, 0.0503198), 0px 22.3363px 17.869px rgba(18, 18, 18, 0.0417275), 0px 12.5216px 10.0172px rgba(18, 18, 18, 0.035), 0px 6.6501px 5.32008px rgba(18, 18, 18, 0.0282725), 0px 2.76726px 2.21381px rgba(18, 18, 18, 0.0196802);
+
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.card p:last-of-type{
+    flex-grow: 1
+}
+.avatar{
+    display: flex;
+    gap: 16px;
+}
+.avatar>div p:first-of-type{font-weight: 700;}
+.avatar>div p:last-of-type{font-size: 14px;}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.card.active {
+    opacity: 1;
+}
+.arrow {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    transform: translateY(-900%);
+}
+.arrow-left {
+    left: 12px;
+}
+.arrow-right {
+    right: 12px;
+}
+.arrow:hover{
+    opacity: 1;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px 120px;
+}
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #525252;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.dot.active {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+}
+
+.ai-card-wrapper{
+    background-color: #fff;
+    color:#020202 ;
+    border-radius: 20px;
+}
+.ai-card-wrapper h1{text-align: center;padding: 50px 0;}
+
+.cta{padding: 120px 0;}
+.cta h1{
+    text-align: center;
+    /* margin-bottom: 32px;      */
+}
+.cta a{
+    box-sizing: border-box;
+  display: block; width: 188px; margin: 0 auto;
+    font-size: 20px;font-weight: 900;
+    border: 1px solid #fff; border-radius: 16px;
+    padding: 20px 32px 20px 40px;
+    display: flex;align-items: center;
+}
+.cta>a>svg{
+    position: relative;
+    left: 12px;
+    fill: #fff;
+}
+.cta>a:hover svg{fill: #020202;}
+footer{
+    font-size: 16px;font-weight: 700;line-height: 1.5;
+}
+footer>.wrap{
+    padding: 20px 0;
+    border-top: 1px solid #FFF;
+
+}
+footer>.wrap>.row1,footer>.wrap>.row2{
+    display: flex;
+    padding: 12px 0;
+}
+footer>.wrap>.row1{justify-content: space-between;}
+footer>.wrap>.row2{gap: 20px;}

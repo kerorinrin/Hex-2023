@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lv.2 AI工具王切版練習</title>
+    <script src="./jquery-3.6.4.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+        <header>
+            <div class="header-wrap">
+            <img class='logo'
+                src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png"
+                alt="AI工具王">
+            <i class="bi bi-list"></i>
+            <i class="bi bi-x-lg"></i>
+        </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">定價</a></li>
+            </ul>
+            </div>
+        </nav>
+
+    <div class="wrap" id="top">
+      <div class="catchcopy">透過<br>AI 工具王的<br>強大模型<br>讓您的業務<br>更聰明</div>
+        <a class="btn1" href="#">開始使用</a>  
+    </div>
+
+    <div class="animation-section">
+        <svg width="116" height="117" viewBox="0 0 117 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M52 0H65V78C66.8414 75.5449 68.8583 73.2178 71.0381 71.0381C77.0739 65.0023 84.2394 60.2144 92.1256 56.9478C100.012 53.6813 108.464 52 117 52V65C110.171 65 103.409 66.345 97.1005 68.9583C90.7915 71.5715 85.0591 75.4018 80.2305 80.2304C75.4018 85.0591 71.5715 90.7915 68.9583 97.1005C66.3486 103.401 65.0037 110.153 65 116.972C65 116.981 65 116.991 65 117H52V116.98C51.9974 110.158 50.6525 103.403 48.0417 97.1005C45.4285 90.7915 41.5982 85.0591 36.7696 80.2305C31.9409 75.4018 26.2085 71.5715 19.8995 68.9583C13.5906 66.345 6.82874 65 0 65L-8.57229e-06 117V52C8.53591 52 16.9883 53.6813 24.8744 56.9478C32.7606 60.2144 39.9261 65.0023 45.9619 71.0381C48.1417 73.2178 50.1586 75.5449 52 78V0Z"
+                fill="white" />
+        </svg>
+        <svg width="117" height="117" viewBox="0 0 117 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M52 0H65V78C66.8414 75.5449 68.8583 73.2178 71.0381 71.0381C77.0739 65.0023 84.2394 60.2144 92.1256 56.9478C100.012 53.6813 108.464 52 117 52V65C110.171 65 103.409 66.345 97.1005 68.9583C90.7915 71.5715 85.0591 75.4018 80.2305 80.2304C75.4018 85.0591 71.5715 90.7915 68.9583 97.1005C66.3486 103.401 65.0037 110.153 65 116.972C65 116.981 65 116.991 65 117H52V116.98C51.9974 110.158 50.6525 103.403 48.0417 97.1005C45.4285 90.7915 41.5982 85.0591 36.7696 80.2305C31.9409 75.4018 26.2085 71.5715 19.8995 68.9583C13.5906 66.345 6.82874 65 0 65L-8.57229e-06 117V52C8.53591 52 16.9883 53.6813 24.8744 56.9478C32.7606 60.2144 39.9261 65.0023 45.9619 71.0381C48.1417 73.2178 50.1586 75.5449 52 78V0Z"
+                fill="white" />
+        </svg>
+        <svg width="117" height="117" viewBox="0 0 117 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M52 0H65V78C66.8414 75.5449 68.8583 73.2178 71.0381 71.0381C77.0739 65.0023 84.2394 60.2144 92.1256 56.9478C100.012 53.6813 108.464 52 117 52V65C110.171 65 103.409 66.345 97.1005 68.9583C90.7915 71.5715 85.0591 75.4018 80.2305 80.2304C75.4018 85.0591 71.5715 90.7915 68.9583 97.1005C66.3486 103.401 65.0037 110.153 65 116.972C65 116.981 65 116.991 65 117H52V116.98C51.9974 110.158 50.6525 103.403 48.0417 97.1005C45.4285 90.7915 41.5982 85.0591 36.7696 80.2305C31.9409 75.4018 26.2085 71.5715 19.8995 68.9583C13.5906 66.345 6.82874 65 0 65L-8.57229e-06 117V52C8.53591 52 16.9883 53.6813 24.8744 56.9478C32.7606 60.2144 39.9261 65.0023 45.9619 71.0381C48.1417 73.2178 50.1586 75.5449 52 78V0Z"
+                fill="white" />
+        </svg>
+    </div>
+
+    <div class="wrap">
+        <h2>我們的服務</h2>
+        <h1>我們相信透過 AI 技術， 包括圖像識別、 自然語言處理和機器翻譯等， 讓您更快、 更準確地做出決策。</h1>
+        <ul class="service-card-group">
+            <li>
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_171_348)">
+                        <path
+                            d="M23.3335 6.66666V43.3333H33.3335V73.3333L56.6668 33.3333H43.3335L56.6668 6.66666H23.3335Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_171_348">
+                            <rect width="80" height="80" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <h1>快速</h1>
+                <p>我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。</p>
+
+            </li>
+            <li>
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_171_354)">
+                        <path
+                            d="M63.3335 30L67.5002 20.8333L76.6668 16.6666L67.5002 12.5L63.3335 3.33331L59.1668 12.5L50.0002 16.6666L59.1668 20.8333L63.3335 30ZM38.3335 31.6666L30.0002 13.3333L21.6668 31.6666L3.3335 40L21.6668 48.3333L30.0002 66.6666L38.3335 48.3333L56.6668 40L38.3335 31.6666ZM63.3335 50L59.1668 59.1666L50.0002 63.3333L59.1668 67.5L63.3335 76.6666L67.5002 67.5L76.6668 63.3333L67.5002 59.1666L63.3335 50Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_171_354">
+                            <rect width="80" height="80" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <h1>靈活</h1>
+                <p>我們的服務可以根據您的需求進行靈活調整，同時還可以滿足不同項目和預算的需求。</p>
+            </li>
+            <li>
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_171_360)">
+                        <path
+                            d="M13.3332 20H6.6665V66.6667C6.6665 70.3334 9.6665 73.3334 13.3332 73.3334H59.9998V66.6667H13.3332V20ZM66.6665 6.66669H26.6665C22.9998 6.66669 19.9998 9.66669 19.9998 13.3334V53.3334C19.9998 57 22.9998 60 26.6665 60H66.6665C70.3332 60 73.3332 57 73.3332 53.3334V13.3334C73.3332 9.66669 70.3332 6.66669 66.6665 6.66669ZM63.3332 36.6667H49.9998V50H43.3332V36.6667H29.9998V30H43.3332V16.6667H49.9998V30H63.3332V36.6667Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_171_360">
+                            <rect width="80" height="80" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <h1>擴充</h1>
+                <p>我們的服務支持多種擴充選項，可以滿足您的不斷增長的 AI 需求。</p>
+            </li>
+        </ul>
+    </div>
+
+    <section class="container">
+        <h1>來自合作夥伴</h1>
+        <div class="img-wrap w1">
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
+                    alt=""></a>
+        </div>
+        <div class="img-wrap w2">
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise8.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise9.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise11.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise12.png?raw=true"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true"
+                    alt=""></a>
+        </div>    
+    </section>
+
+    <div class="cards-wrapper">
+        <div class="card">
+            <p>★★★★★</p>
+            <p>非常喜歡 AI工具王 提供的 AI 模型租賃服務，使用起來非常方便，而且效果非常好。對於我們 公司的業務來說，這個服務非常重要，因為我 們需要大量的數據進行分析和預測，AI工具王 提供的 AI
+                模型能夠幫助我們節省大量時間和成本，實在是太棒了！</p>
+            <div class="avatar">
+                <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar3.png?raw=true"
+                    alt="">
+                <div>
+                    <p>陳小姐</p>
+                    <p>ABC科技有限公司</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <p>★★★★★</p>
+            <p>作為一家醫療器材公司，我們非常關注人工智 能技術的應用，而 AI工具王 提供的 AI 模型租賃 服務為我們帶來了很大的幫助。我們使用 AI工 具王
+                的模型進行醫學影像分析和預測，這些模型非常精確，能夠幫助我們更好地診斷病情， 提高治療效果。感謝 AI工具王 團隊的辛勤工作！</p>
+            <div class="avatar">
+                <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar1.png?raw=true"
+                    alt="">
+                <div>
+                    <p>劉小姐</p>
+                    <p>XYZ 醫療器材有限公司</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <p>★★★★★</p>
+            <p>我們銀行一直在尋找能夠幫助我們提高風險控 制和客戶服務的解決方案，而 AI工具王 提供的 AI 模型租賃服務正好滿足了我們的需求。我們 使用 AI工具王
+                的模型進行客戶信用評估和詐騙檢測等任務，這些模型非常準確，能夠幫助我 們更好地控制風險，提高客戶滿意度。非常感謝 AI工具王 團隊的支持！</p>
+            <div class="avatar">
+                <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar2.png?raw=true"
+                    alt="">
+                <div>
+                    <p>黃先生</p>
+                    <p>EFG 銀行</p>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      <div class="navigation">
+        <div class="arrow arrow-left">&lt;</div>
+        <div class="dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="arrow arrow-right">&gt;</div>
+      </div>
+
+      <div class="ai-card-wrapper"><h1>這些超酷的應用，<br>都來自 AI工具王</h1></div>
+
+      <div class="cta">
+        <h1>現在就來建立<br>屬於你的服務吧</h1>
+        <a href="#">開始使用<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_327_1415)">
+            <path d="M9.5 5V7H16.09L4.5 18.59L5.91 20L17.5 8.41V15H19.5V5H9.5Z" />
+            </g>
+            <defs>
+            <clipPath id="clip0_327_1415">
+            <rect width="24" height="24" fill="white" transform="translate(0.5)"/>
+            </clipPath>
+            </defs>
+            </svg>
+            </a>
+      </div>
+
+      <footer>
+        <div class="wrap">
+            <div class="row1">
+                <div>AI工具王&copy;2023</div>
+                <a href="#top">Back to top　↑</a>
+            </div>
+            <div class="row2"><a href="#">Facebook</a>
+                <a href="#">Twitter</a><a href="#">Instagram</a></div>
+        </div>
+      </footer>
+
+
+
+
+
+
+
+    <script>
+          
+           $(function () {
+        const List = $(".bi-list");
+        const X = $(".bi-x-lg");
+        const Nav = $("nav");
+
+        List.on("click", function () { 
+            $(this).toggleClass('open'); 
+            X.toggleClass('open');
+            Nav.toggleClass('open') });
+
+        X.on("click", function () { 
+            $(this).toggleClass('open');
+            List.toggleClass('open'); 
+            Nav.toggleClass('open') });
+      });
+   
+
+      $(document).ready(function() {
+     var cards = $('.card');
+     var dots = $('.dot');
+     var currentIndex = 0;
+     var timer;
+   
+     // 顯示第一張卡片和對應的dot
+     cards.eq(currentIndex).addClass('active');
+     dots.eq(currentIndex).addClass('active');
+   
+     function showCard(index) {
+       // 隱藏當前顯示的卡片和dot
+       cards.eq(currentIndex).removeClass('active');
+       dots.eq(currentIndex).removeClass('active');
+   
+       // 更新索引
+       currentIndex = index;
+   
+       // 顯示下一張卡片和對應的dot
+       cards.eq(currentIndex).addClass('active');
+       dots.eq(currentIndex).addClass('active');
+     }
+   
+     function startAutoPlay() {
+       timer = setInterval(function() {
+         var newIndex = (currentIndex + 1) % cards.length;
+         showCard(newIndex);
+       }, 3000); // 每 3 秒切換一次卡片
+     }
+   
+     function stopAutoPlay() {
+       clearInterval(timer);
+     }
+   
+     // 左箭頭點擊事件
+     $('.arrow-left').click(function() {
+       var newIndex = (currentIndex - 1 + cards.length) % cards.length;
+       showCard(newIndex);
+       stopAutoPlay(); // 停止自動輪播
+     });
+   
+     // 右箭頭點擊事件
+     $('.arrow-right').click(function() {
+       var newIndex = (currentIndex + 1) % cards.length;
+       showCard(newIndex);
+       stopAutoPlay(); // 停止自動輪播
+     });
+   
+     // dot 點擊事件
+     dots.click(function() {
+       var newIndex = $(this).index();
+       showCard(newIndex);
+       stopAutoPlay(); // 停止自動輪播
+     });
+   
+     // 自動輪播開始
+     startAutoPlay();
+   });
+   
+
+    </script>
+</body>
+
+</html>
