@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lv.2 AI工具王切版練習</title>
+    <title>首頁-AI工具王</title>
     <script src="./jquery-3.6.4.js"></script>
+    <script src="./script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
@@ -55,7 +56,7 @@
     </div>
 
     <div class="wrap">
-        <h2>我們的服務</h2>
+        <div class="title">我們的服務</div>
         <h1>我們相信透過 AI 技術， 包括圖像識別、 自然語言處理和機器翻譯等， 讓您更快、 更準確地做出決策。</h1>
         <ul class="service-card-group">
             <li>
@@ -114,34 +115,37 @@
     <section class="container">
         <h1>來自合作夥伴</h1>
         <div class="img-wrap w1">
+           
             <a href="#"><img
-                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise.png?raw=true"
-                    alt=""></a>
-            <a href="#"><img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise.png?raw=true"
+                alt=""></a>
+                <a href="#"><img
                     src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
                     alt=""></a>
-            <a href="#"><img
-                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true"
-                    alt=""></a>
-            <a href="#"><img
-                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true"
-                    alt=""></a>
-            <a href="#"><img
-                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true"
-                    alt=""></a>
-            <a href="#"><img
-                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"
-                    alt=""></a>
-            <a href="#"><img
-                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true"
-                    alt=""></a>
-            <a href="#"><img
+                    <a href="#"><img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true"
+                        alt=""></a>
+                        <a href="#"><img
+                            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true"
+                            alt=""></a>
+                            <a href="#"><img
+                                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true"
+                                alt=""></a>
+                                <a href="#"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"
+                                    alt=""></a>
+                                    <a href="#"><img
+                                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true"
+                                        alt=""></a>
+                                        <a href="#"><img
                     src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
                     alt=""></a>
-        </div>
-        <div class="img-wrap w2">
+                    <div class="linear left l1"></div><div class="linear right r1"></div>
+                </div>
+                <div class="img-wrap w2">
+            
             <a href="#"><img
-                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true"
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true"
                     alt=""></a>
             <a href="#"><img
                     src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise8.png?raw=true"
@@ -161,6 +165,7 @@
             <a href="#"><img
                     src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true"
                     alt=""></a>
+                    <div class="linear left l2"></div><div class="linear right r2"></div>
         </div>    
     </section>
 
@@ -252,22 +257,6 @@
 
     <script>
           
-           $(function () {
-        const List = $(".bi-list");
-        const X = $(".bi-x-lg");
-        const Nav = $("nav");
-
-        List.on("click", function () { 
-            $(this).toggleClass('open'); 
-            X.toggleClass('open');
-            Nav.toggleClass('open') });
-
-        X.on("click", function () { 
-            $(this).toggleClass('open');
-            List.toggleClass('open'); 
-            Nav.toggleClass('open') });
-      });
-   
 
       $(document).ready(function() {
      var cards = $('.card');
